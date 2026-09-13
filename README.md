@@ -1,105 +1,33 @@
-# SACHITH GitHub HUD
+# GitHub profile README snippets
 
-Code-generated GitHub profile status bars with matching **light + dark** versions.
+These snippets automatically choose the dark or light SVG according to the viewer's system theme.
 
-This folder generates all 6 SVG files from one Python script:
+## System Metrics
 
-- `assets/system-metrics-dark.svg`
-- `assets/system-metrics-light.svg`
-- `assets/contribution-signal-dark.svg`
-- `assets/contribution-signal-light.svg`
-- `assets/dev-signal-dark.svg`
-- `assets/dev-signal-light.svg`
-
-## What updates automatically
-
-**System Metrics**
-- Public repositories
-- Total stars across public repositories
-- Followers
-- Last-365-day GitHub contributions
-
-**Contribution Signal**
-- Contribution total
-- Current streak
-- Best streak
-- Month-by-month graph for the last 365 days
-
-**Dev Signal**
-- Latest public repository/project
-- Latest repository language
-- Activity state (`ACTIVE NOW`, `RECENTLY ACTIVE`, `IDLE`, `OFFLINE`)
-- IDE name comes from `config.json` because GitHub cannot detect your local IDE
-
-## 1. Put the folder in your GitHub profile repo
-
-For this setup the profile repository is expected to be:
-
-```text
-Sachith-Gunarathna/Sachith-Gunarathna
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/system-metrics-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/system-metrics-light.svg">
+  <img width="100%" alt="GitHub System Metrics" src="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/system-metrics-light.svg">
+</picture>
 ```
 
-Copy the included files/folders into that repo and push them to `main`.
+## Contribution Signal
 
-## 2. Optional: add a PAT for the contribution calendar
-
-The workflow first tries `GH_PAT` and otherwise uses the automatic `GITHUB_TOKEN`.
-
-If GitHub Actions reports a GraphQL permission error, create a classic personal access token with public read access and add it to:
-
-```text
-Repository Settings → Secrets and variables → Actions → New repository secret
-Name: GH_PAT
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/contribution-signal-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/contribution-signal-light.svg">
+  <img width="100%" alt="Contribution Signal Graph" src="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/contribution-signal-light.svg">
+</picture>
 ```
 
-Do **not** put the token inside `config.json`, the Python file, or README.
+## Dev Signal
 
-## 3. Run it once
-
-Open:
-
-```text
-Actions → Update GitHub HUD → Run workflow
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/dev-signal-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/dev-signal-light.svg">
+  <img width="100%" alt="SACHITH Dev Signal" src="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/dev-signal-light.svg">
+</picture>
 ```
-
-The workflow regenerates the SVGs and commits only when something actually changes.
-
-## 4. Add the bars to your profile README
-
-Use the snippets from `README_SNIPPET.md`.
-
-## Local preview
-
-No third-party Python packages are required.
-
-Generate demo/fallback data without internet:
-
-```bash
-python scripts/generate_status.py --demo
-```
-
-Generate live data when a GitHub token is available:
-
-```bash
-GH_TOKEN=your_token python scripts/generate_status.py
-```
-
-On Windows PowerShell:
-
-```powershell
-$env:GH_TOKEN="your_token"
-python scripts/generate_status.py
-```
-
-## Customize
-
-Edit only `config.json` for normal customization.
-
-- `display_name`: heading name
-- `primary_stack`: primary language shown in System Metrics
-- `active_ide`: IDE shown in Dev Signal
-- `project_mode`: `latest_repo` or `fixed`
-- `project_name`: used when project mode is `fixed` and as a fallback
-- activity thresholds can also be changed there
-
-The `fallback` section is used only when live GitHub data cannot be fetched or when `--demo` is used.
