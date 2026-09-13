@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="608" viewBox="0 0 2048 608" role="img" aria-label="Developer signal status">
+
+  <defs>
+    <pattern id="dev-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#D7F2F6" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="dev-area" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7EE3E8" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#7EE3E8" stop-opacity=".04"/>
+    </linearGradient>
+    <filter id="dev-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+      .title { font-weight: 800; letter-spacing: 3px; }
+      .label { font-size: 17px; letter-spacing: 1.7px; }
+      .value { font-weight: 800; }
+    </style>
+  </defs>
+  <rect width="2048" height="608" fill="#F8FCFD"/>
+  <rect width="2048" height="608" fill="url(#dev-grid)" opacity=".62"/>
+
+  <rect x="1" y="1" width="2046" height="606" fill="none" stroke="#46C7D7" stroke-width="2"/>
+  <path d="M1 38L38 1 M2010 1L2047 38 M1 570L38 607 M2010 607L2047 570" fill="none" stroke="#46C7D7" stroke-width="2"/>
+  <rect x="48" y="185" width="1952" height="96" fill="#FFFFFF" stroke="#46C7D7"/>
+  <rect x="48" y="185" width="16" height="96" fill="#20C5D3"/>
+  <text class="mono title" x="94" y="231" font-size="34" fill="#102130">SACHITH // DEV SIGNAL</text>
+  <text class="mono" x="95" y="260" font-size="18" letter-spacing="2" fill="#597B96">LOCAL IDE HEARTBEAT • PIXEL HUD v3</text>
+  <rect x="1400" y="199" width="342" height="67" fill="#FBFEFF" stroke="#28D9BE"/>
+  <path d="M1400 214v-15h18 M1724 199h18v15 M1400 251v15h18 M1724 266h18v-15" fill="none" stroke="#28D9BE"/>
+  <rect x="1427" y="220" width="22" height="22" fill="#28D9BE"/>
+  <text class="mono value" x="1471" y="241" font-size="22" fill="#28D9BE">CODING NOW</text>
+  <rect x="1790" y="234" width="18" height="28" fill="#F3C85C"/>
+  <rect x="1820" y="216" width="18" height="46" fill="#F3C85C" opacity=".85"/>
+  <rect x="1850" y="194" width="18" height="68" fill="#28D9BE"/>
+  <rect x="1880" y="220" width="18" height="42" fill="#20C5D3"/>
+  <rect x="1910" y="202" width="18" height="60" fill="#F25F7B"/>
+  <rect x="1940" y="224" width="18" height="38" fill="#F25F7B" opacity=".85"/>
+  
+  <g>
+    <rect x="48" y="312" width="407" height="158" fill="#FBFEFF" stroke="#46C7D7"/>
+    <path d="M48 332v-18h20 M435 312h20v20 M48 450v18h20 M435 470h20v-20" fill="none" stroke="#46C7D7"/>
+    <rect x="72" y="336" width="18" height="18" fill="#F3C85C"/>
+    <text class="mono label" x="106" y="353" fill="#597B96">LANGUAGE</text>
+    <text class="mono value" x="92" y="417" font-size="34" fill="#102130">JAVA</text>
+    <rect x="92" y="440" width="262" height="7" fill="#F3C85C"/>
+  </g>
+  <g>
+    <rect x="535" y="312" width="470" height="158" fill="#FBFEFF" stroke="#46C7D7"/>
+    <path d="M535 332v-18h20 M985 312h20v20 M535 450v18h20 M985 470h20v-20" fill="none" stroke="#46C7D7"/>
+    <rect x="559" y="336" width="18" height="18" fill="#28D9BE"/>
+    <text class="mono label" x="593" y="353" fill="#597B96">ACTIVE IDE</text>
+    <text class="mono value" x="579" y="417" font-size="38" fill="#102130">INTELLIJ IDEA</text>
+    <rect x="579" y="440" width="325" height="7" fill="#28D9BE"/>
+  </g>
+  <g>
+    <rect x="1038" y="312" width="547" height="158" fill="#FBFEFF" stroke="#46C7D7"/>
+    <path d="M1038 332v-18h20 M1565 312h20v20 M1038 450v18h20 M1565 470h20v-20" fill="none" stroke="#46C7D7"/>
+    <rect x="1062" y="336" width="18" height="18" fill="#F25F7B"/>
+    <text class="mono label" x="1096" y="353" fill="#597B96">PROJECT</text>
+    <text class="mono value" x="1082" y="417" font-size="38" fill="#102130">FULL-STACK WORKSPACE</text>
+    <rect x="1082" y="440" width="402" height="7" fill="#F25F7B"/>
+  </g>
+  <g>
+    <rect x="1618" y="312" width="380" height="158" fill="#FBFEFF" stroke="#46C7D7"/>
+    <path d="M1618 332v-18h20 M1978 312h20v20 M1618 450v18h20 M1978 470h20v-20" fill="none" stroke="#46C7D7"/>
+    <rect x="1642" y="336" width="18" height="18" fill="#48BFE3"/>
+    <text class="mono label" x="1676" y="353" fill="#597B96">LAST SIGNAL</text>
+    <text class="mono value" x="1662" y="417" font-size="34" fill="#102130">ACTIVE NOW</text>
+    <rect x="1662" y="440" width="235" height="7" fill="#48BFE3"/>
+  </g>
+  <text class="mono" x="70" y="525" font-size="16" fill="#597B96">VS CODE // INTELLIJ IDEA // ANDROID STUDIO // JAVA-FIRST FULL-STACK WORKFLOW</text>
+  <text class="mono" x="1980" y="525" text-anchor="end" font-size="16" fill="#597B96">SYS.SACHITH</text>
+</svg>

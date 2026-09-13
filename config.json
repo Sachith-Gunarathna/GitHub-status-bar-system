@@ -1,0 +1,31 @@
+{
+  "github_username": "Sachith-Gunarathna",
+  "display_name": "SACHITH",
+  "primary_stack": "JAVA",
+  "active_ide": "INTELLIJ IDEA",
+  "project_mode": "latest_repo",
+  "project_name": "FULL-STACK WORKSPACE",
+  "timezone": "Asia/Colombo",
+  "active_minutes": 20,
+  "recent_minutes": 180,
+  "idle_minutes": 1440,
+  "footer_tools": [
+    "VS CODE",
+    "INTELLIJ IDEA",
+    "ANDROID STUDIO",
+    "JAVA-FIRST FULL-STACK WORKFLOW"
+  ],
+  "fallback": {
+    "public_repos": 31,
+    "total_stars": 48,
+    "followers": 27,
+    "total_contributions": 1400,
+    "current_streak": 6,
+    "best_streak": 7,
+    "monthly_contributions": [30, 85, 45, 72, 110, 60, 100, 78, 150, 100, 70, 112, 175],
+    "month_labels": ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP"],
+    "latest_repo": "FULL-STACK WORKSPACE",
+    "latest_language": "JAVA",
+    "status": "ACTIVE NOW"
+  }
+}

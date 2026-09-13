@@ -1,36 +1,105 @@
-# SACHITH Dev Pulse
+# SACHITH GitHub HUD
 
-A custom animated GitHub profile activity bar for **Sachith**.
+Code-generated GitHub profile status bars with matching **light + dark** versions.
 
-![Sachith Dev Pulse](./assets/dev-pulse.svg)
+This folder generates all 6 SVG files from one Python script:
 
-## Install on your GitHub profile
+- `assets/system-metrics-dark.svg`
+- `assets/system-metrics-light.svg`
+- `assets/contribution-signal-dark.svg`
+- `assets/contribution-signal-light.svg`
+- `assets/dev-signal-dark.svg`
+- `assets/dev-signal-light.svg`
 
-5. Add this line wherever you want the bar in your profile `README.md`:
+## What updates automatically
 
-```md
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Sachith-Gunarathna/Sachith-Gunarathna/main/assets/dev-pulse.svg" width="100%" alt="Sachith Dev Pulse" />
-</p>
+**System Metrics**
+- Public repositories
+- Total stars across public repositories
+- Followers
+- Last-365-day GitHub contributions
+
+**Contribution Signal**
+- Contribution total
+- Current streak
+- Best streak
+- Month-by-month graph for the last 365 days
+
+**Dev Signal**
+- Latest public repository/project
+- Latest repository language
+- Activity state (`ACTIVE NOW`, `RECENTLY ACTIVE`, `IDLE`, `OFFLINE`)
+- IDE name comes from `config.json` because GitHub cannot detect your local IDE
+
+## 1. Put the folder in your GitHub profile repo
+
+For this setup the profile repository is expected to be:
+
+```text
+Sachith-Gunarathna/Sachith-Gunarathna
 ```
 
-## What it does
+Copy the included files/folders into that repo and push them to `main`.
 
-- Reads your latest **public GitHub activity**.
-- Shows `ACTIVE NOW`, `RECENTLY ACTIVE`, `IDLE`, or `OFFLINE`.
-- Shows the latest public repository, event type, detected repo language, and last activity age.
-- Regenerates automatically every 10 minutes with GitHub Actions.
-- Uses only Python standard library; there are no package dependencies.
+## 2. Optional: add a PAT for the contribution calendar
 
-## Status logic
+The workflow first tries `GH_PAT` and otherwise uses the automatic `GITHUB_TOKEN`.
 
-- `ACTIVE NOW`: latest public event <= 20 minutes ago
-- `RECENTLY ACTIVE`: <= 3 hours ago
-- `IDLE`: <= 24 hours ago
-- `OFFLINE`: > 24 hours ago
+If GitHub Actions reports a GraphQL permission error, create a classic personal access token with public read access and add it to:
 
-You can change the thresholds inside `config.json`.
+```text
+Repository Settings → Secrets and variables → Actions → New repository secret
+Name: GH_PAT
+```
 
-## Important limitation
+Do **not** put the token inside `config.json`, the Python file, or README.
 
-This reflects **public GitHub activity**, not true keyboard/IDE presence. GitHub's public events can be delayed, and private-repository work will not appear through the public-events feed. A local IDE heartbeat can be added later if you want a more real-time `CODING NOW` state.
+## 3. Run it once
+
+Open:
+
+```text
+Actions → Update GitHub HUD → Run workflow
+```
+
+The workflow regenerates the SVGs and commits only when something actually changes.
+
+## 4. Add the bars to your profile README
+
+Use the snippets from `README_SNIPPET.md`.
+
+## Local preview
+
+No third-party Python packages are required.
+
+Generate demo/fallback data without internet:
+
+```bash
+python scripts/generate_status.py --demo
+```
+
+Generate live data when a GitHub token is available:
+
+```bash
+GH_TOKEN=your_token python scripts/generate_status.py
+```
+
+On Windows PowerShell:
+
+```powershell
+$env:GH_TOKEN="your_token"
+python scripts/generate_status.py
+```
+
+## Customize
+
+Edit only `config.json` for normal customization.
+
+- `display_name`: heading name
+- `primary_stack`: primary language shown in System Metrics
+- `active_ide`: IDE shown in Dev Signal
+- `project_mode`: `latest_repo` or `fixed`
+- `project_name`: used when project mode is `fixed` and as a fallback
+- activity thresholds can also be changed there
+
+The `fallback` section is used only when live GitHub data cannot be fetched or when `--demo` is used.

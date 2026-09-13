@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="608" viewBox="0 0 2048 608" role="img" aria-label="GitHub system metrics">
+
+  <defs>
+    <pattern id="metrics-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#123441" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="metrics-area" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0FA8A8" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#0FA8A8" stop-opacity=".04"/>
+    </linearGradient>
+    <filter id="metrics-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+      .title { font-weight: 800; letter-spacing: 3px; }
+      .label { font-size: 17px; letter-spacing: 1.7px; }
+      .value { font-weight: 800; }
+    </style>
+  </defs>
+  <rect width="2048" height="608" fill="#061018"/>
+  <rect width="2048" height="608" fill="url(#metrics-grid)" opacity=".62"/>
+
+  <rect x="1" y="1" width="2046" height="606" fill="none" stroke="#1B8FA5" stroke-width="2"/>
+  <path d="M1 38L38 1 M2010 1L2047 38 M1 570L38 607 M2010 607L2047 570" fill="none" stroke="#1B8FA5" stroke-width="2"/>
+  <rect x="50" y="170" width="1948" height="86" fill="#081821" stroke="#1B8FA5" stroke-width="1.5"/>
+  <rect x="50" y="170" width="16" height="86" fill="#53E9F0"/>
+  <text class="mono title" x="98" y="225" font-size="36" fill="#F4FAFC">GITHUB // SYSTEM METRICS</text>
+  <text class="mono" x="1760" y="220" font-size="24" fill="#91B8C8">PRIMARY:</text>
+  <text class="mono value" x="1965" y="220" font-size="24" text-anchor="end" fill="#30E2C2">JAVA</text>
+
+  <g>
+    <rect x="50" y="280" width="473" height="170" fill="#07151d" stroke="#1B8FA5" stroke-opacity=".55"/>
+    <rect x="50" y="280" width="473" height="8" fill="#30E2C2"/>
+    <text class="mono label" x="82" y="336" fill="#91B8C8">PUBLIC REPOS</text>
+    <text class="mono value" x="82" y="406" font-size="54" fill="#F4FAFC">31</text>
+    <rect x="418" y="385" width="18" height="20" fill="#30E2C2" opacity=".75"/>
+    <rect x="452" y="363" width="18" height="42" fill="#30E2C2" opacity=".85"/>
+    <rect x="486" y="340" width="18" height="65" fill="#30E2C2"/>
+  </g>
+  <g>
+    <rect x="551" y="280" width="473" height="170" fill="#07151d" stroke="#1B8FA5" stroke-opacity=".55"/>
+    <rect x="551" y="280" width="473" height="8" fill="#FFD365"/>
+    <text class="mono label" x="583" y="336" fill="#91B8C8">TOTAL STARS</text>
+    <text class="mono value" x="583" y="406" font-size="54" fill="#F4FAFC">48</text>
+    <rect x="919" y="385" width="18" height="20" fill="#FFD365" opacity=".75"/>
+    <rect x="953" y="363" width="18" height="42" fill="#FFD365" opacity=".85"/>
+    <rect x="987" y="340" width="18" height="65" fill="#FFD365"/>
+  </g>
+  <g>
+    <rect x="1052" y="280" width="473" height="170" fill="#07151d" stroke="#1B8FA5" stroke-opacity=".55"/>
+    <rect x="1052" y="280" width="473" height="8" fill="#FF6685"/>
+    <text class="mono label" x="1084" y="336" fill="#91B8C8">FOLLOWERS</text>
+    <text class="mono value" x="1084" y="406" font-size="54" fill="#F4FAFC">27</text>
+    <rect x="1420" y="385" width="18" height="20" fill="#FF6685" opacity=".75"/>
+    <rect x="1454" y="363" width="18" height="42" fill="#FF6685" opacity=".85"/>
+    <rect x="1488" y="340" width="18" height="65" fill="#FF6685"/>
+  </g>
+  <g>
+    <rect x="1553" y="280" width="473" height="170" fill="#07151d" stroke="#1B8FA5" stroke-opacity=".55"/>
+    <rect x="1553" y="280" width="473" height="8" fill="#5BD8F5"/>
+    <text class="mono label" x="1585" y="336" fill="#91B8C8">365D SIGNALS</text>
+    <text class="mono value" x="1585" y="406" font-size="54" fill="#F4FAFC">1.4K</text>
+    <rect x="1921" y="385" width="18" height="20" fill="#5BD8F5" opacity=".75"/>
+    <rect x="1955" y="363" width="18" height="42" fill="#5BD8F5" opacity=".85"/>
+    <rect x="1989" y="340" width="18" height="65" fill="#5BD8F5"/>
+  </g>
+  <text class="mono" x="52" y="500" font-size="16" fill="#91B8C8">PUBLIC PROFILE TELEMETRY // CACHED SERVER-SIDE // NO CLIENT TOKEN EXPOSED</text>
+</svg>
