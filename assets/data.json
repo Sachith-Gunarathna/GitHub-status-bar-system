@@ -1,24 +1,24 @@
 {
-  "public_repos": 31,
-  "total_stars": 48,
-  "followers": 27,
-  "total_contributions": 1400,
+  "public_repos": 47,
+  "total_stars": 3,
+  "followers": 4,
+  "total_contributions": 747,
   "current_streak": 6,
-  "best_streak": 7,
+  "best_streak": 13,
   "monthly_contributions": [
-    30,
-    85,
-    45,
+    0,
+    0,
+    0,
+    0,
+    44,
+    186,
     72,
-    110,
-    60,
-    100,
-    78,
-    150,
-    100,
-    70,
-    112,
-    175
+    87,
+    132,
+    50,
+    33,
+    81,
+    62
   ],
   "month_labels": [
     "SEP",
@@ -35,7 +35,7 @@
     "AUG",
     "SEP"
   ],
-  "latest_repo": "FULL-STACK WORKSPACE",
-  "latest_language": "JAVA",
+  "latest_repo": "GitHub-status-bar-system",
+  "latest_language": "Python",
   "status": "ACTIVE NOW"
 }
