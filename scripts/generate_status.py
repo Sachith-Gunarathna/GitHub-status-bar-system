@@ -146,7 +146,7 @@ def main() -> int:
   <rect x="18" y="18" width="884" height="154" rx="18" fill="#0a1422" fill-opacity="0.58" stroke="#14314a"/>
 
   <g transform="translate(42 39)">
-    <text class="sans white" x="0" y="0" font-size="20" font-weight="800" letter-spacing="2">⚡ {display_name} DEV PULSE</text>
+    <text class="sans white" x="0" y="0" font-size="20" font-weight="800" letter-spacing="2">{display_name} DEV PULSE</text>
     <text class="mono muted" x="0" y="24" font-size="11" letter-spacing="1.2">{role}</text>
   </g>
 
