@@ -54,7 +54,7 @@
     <text class="white" x="492" y="20" font-size="15" font-weight="800">PUSH</text>
 
     <text class="muted" x="690" y="0">LAST ACTIVE</text>
-    <text x="690" y="20" font-size="15" font-weight="800" fill="#2dfc9f">just now</text>
+    <text x="690" y="20" font-size="15" font-weight="800" fill="#2dfc9f">5m ago</text>
   </g>
 
   <text class="mono" x="42" y="164" font-size="9.5" fill="#50667c">AUTO-GENERATED FROM PUBLIC GITHUB ACTIVITY • REFRESHED BY GITHUB ACTIONS</text>
