@@ -6,10 +6,6 @@ A custom animated GitHub profile activity bar for **Sachith**.
 
 ## Install on your GitHub profile
 
-1. Copy these files into your GitHub profile repository (normally the repo named exactly the same as your GitHub username).
-2. Open `config.json` and confirm `github_username` is correct.
-3. Commit and push to the `main` branch.
-4. Open **Actions** → **Update Dev Pulse** → **Run workflow** once.
 5. Add this line wherever you want the bar in your profile `README.md`:
 
 ```md
