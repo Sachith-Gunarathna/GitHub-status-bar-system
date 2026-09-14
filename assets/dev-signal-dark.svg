@@ -28,10 +28,10 @@
   <rect x="48" y="185" width="16" height="96" fill="#53E9F0"/>
   <text class="mono title" x="94" y="231" font-size="34" fill="#F4FAFC">SACHITH // DEV SIGNAL</text>
   <text class="mono" x="95" y="260" font-size="18" letter-spacing="2" fill="#91B8C8">LOCAL IDE HEARTBEAT • PIXEL HUD v3</text>
-  <rect x="1400" y="199" width="342" height="67" fill="#07151d" stroke="#30E2C2"/>
-  <path d="M1400 214v-15h18 M1724 199h18v15 M1400 251v15h18 M1724 266h18v-15" fill="none" stroke="#30E2C2"/>
-  <rect x="1427" y="220" width="22" height="22" fill="#30E2C2"/>
-  <text class="mono value" x="1471" y="241" font-size="22" fill="#30E2C2">CODING NOW</text>
+  <rect x="1400" y="199" width="342" height="67" fill="#07151d" stroke="#FFD365"/>
+  <path d="M1400 214v-15h18 M1724 199h18v15 M1400 251v15h18 M1724 266h18v-15" fill="none" stroke="#FFD365"/>
+  <rect x="1427" y="220" width="22" height="22" fill="#FFD365"/>
+  <text class="mono value" x="1471" y="241" font-size="22" fill="#FFD365">IDLE</text>
   <rect x="1790" y="234" width="18" height="28" fill="#FFD365"/>
   <rect x="1820" y="216" width="18" height="46" fill="#FFD365" opacity=".85"/>
   <rect x="1850" y="194" width="18" height="68" fill="#30E2C2"/>
@@ -68,7 +68,7 @@
     <path d="M1618 332v-18h20 M1978 312h20v20 M1618 450v18h20 M1978 470h20v-20" fill="none" stroke="#1B8FA5"/>
     <rect x="1642" y="336" width="18" height="18" fill="#5BD8F5"/>
     <text class="mono label" x="1676" y="353" fill="#91B8C8">LAST SIGNAL</text>
-    <text class="mono value" x="1662" y="417" font-size="34" fill="#F4FAFC">ACTIVE NOW</text>
+    <text class="mono value" x="1662" y="417" font-size="34" fill="#F4FAFC">IDLE</text>
     <rect x="1662" y="440" width="235" height="7" fill="#5BD8F5"/>
   </g>
   <text class="mono" x="70" y="525" font-size="16" fill="#91B8C8">VS CODE // INTELLIJ IDEA // ANDROID STUDIO // JAVA-FIRST FULL-STACK WORKFLOW</text>
