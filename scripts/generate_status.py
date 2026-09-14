@@ -113,7 +113,7 @@ def compute_streaks(day_counts: dict[date, int], today: date) -> tuple[int, int]
     if not day_counts:
         return 0, 0
 
-    # Current streak is allowed to end yesterday when today's cell is still empty.
+
     cursor = today
     if day_counts.get(cursor, 0) == 0:
         cursor -= timedelta(days=1)
@@ -202,12 +202,12 @@ def resolve_username(cfg: dict[str, Any], cli_user: str | None = None) -> str:
     env_owner = (os.getenv("GITHUB_REPOSITORY_OWNER") or os.getenv("TARGET_USER") or "").strip()
     config_user = str(cfg.get("github_username", "")).strip()
 
-    # If config_user is empty or explicitly set to AUTO or placeholder
+    
     if not config_user or config_user.upper() in ("AUTO", "YOUR_GITHUB_USERNAME", "USERNAME"):
         if env_owner:
             return env_owner
 
-    # If running in GitHub Actions in a template/forked repo and owner differs from default author
+    
     if env_owner and env_owner.lower() != "sachith-gunarathna" and config_user.lower() == "sachith-gunarathna":
         return env_owner
 
@@ -218,7 +218,7 @@ def resolve_display_name(cfg: dict[str, Any], username: str) -> str:
     name = str(cfg.get("display_name", "")).strip()
     if not name or name.upper() in ("AUTO", "YOUR_NAME", "DEV"):
         return username.upper()
-    # If target user is not original author, fallback to that user's username
+    
     if username.lower() != "sachith-gunarathna" and name.upper() == "SACHITH":
         return username.upper()
     return name.upper()
