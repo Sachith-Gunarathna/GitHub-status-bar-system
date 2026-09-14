@@ -195,6 +195,35 @@ def get_contributions(username: str, token: str | None) -> dict[str, Any]:
     }
 
 
+def resolve_username(cfg: dict[str, Any], cli_user: str | None = None) -> str:
+    if cli_user and cli_user.strip():
+        return cli_user.strip()
+
+    env_owner = (os.getenv("GITHUB_REPOSITORY_OWNER") or os.getenv("TARGET_USER") or "").strip()
+    config_user = str(cfg.get("github_username", "")).strip()
+
+    # If config_user is empty or explicitly set to AUTO or placeholder
+    if not config_user or config_user.upper() in ("AUTO", "YOUR_GITHUB_USERNAME", "USERNAME"):
+        if env_owner:
+            return env_owner
+
+    # If running in GitHub Actions in a template/forked repo and owner differs from default author
+    if env_owner and env_owner.lower() != "sachith-gunarathna" and config_user.lower() == "sachith-gunarathna":
+        return env_owner
+
+    return config_user or env_owner or "Sachith-Gunarathna"
+
+
+def resolve_display_name(cfg: dict[str, Any], username: str) -> str:
+    name = str(cfg.get("display_name", "")).strip()
+    if not name or name.upper() in ("AUTO", "YOUR_NAME", "DEV"):
+        return username.upper()
+    # If target user is not original author, fallback to that user's username
+    if username.lower() != "sachith-gunarathna" and name.upper() == "SACHITH":
+        return username.upper()
+    return name.upper()
+
+
 def collect_data(cfg: dict[str, Any], force_demo: bool = False) -> dict[str, Any]:
     fallback = dict(cfg.get("fallback", {}))
     if force_demo:
@@ -204,6 +233,7 @@ def collect_data(cfg: dict[str, Any], force_demo: bool = False) -> dict[str, Any
     token = os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN")
     data = dict(fallback)
 
+    user: dict[str, Any] = {}
     try:
         user = rest_get(f"/users/{username}", token)
         data["public_repos"] = int(user.get("public_repos", data.get("public_repos", 0)))
@@ -216,6 +246,8 @@ def collect_data(cfg: dict[str, Any], force_demo: bool = False) -> dict[str, Any
         repos = fetch_repositories(username, token)
         if repos:
             data["total_stars"] = sum(int(repo.get("stargazers_count", 0)) for repo in repos)
+        elif repos is not None and user.get("public_repos", 0) == 0:
+            data["total_stars"] = 0
     except Exception as exc:
         print(f"[warn] repos API: {exc}", file=sys.stderr)
 
@@ -255,6 +287,11 @@ def collect_data(cfg: dict[str, Any], force_demo: bool = False) -> dict[str, Any
                             data["latest_language"] = repo_data["language"]
                     except Exception:
                         pass
+        else:
+            data["status"] = "IDLE"
+            if repos:
+                data["latest_repo"] = repos[0].get("name", "WORKSPACE")
+                data["latest_language"] = repos[0].get("language") or cfg.get("primary_stack", "JAVA")
     except Exception as exc:
         print(f"[warn] public events API: {exc}", file=sys.stderr)
 
@@ -531,9 +568,16 @@ def write(path: Path, text: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate GitHub HUD status bars")
     parser.add_argument("--demo", action="store_true", help="Use fallback data from config.json")
+    parser.add_argument("--user", type=str, default=None, help="GitHub username override")
     args = parser.parse_args()
 
     cfg = load_config()
+    username = resolve_username(cfg, args.user)
+    display_name = resolve_display_name(cfg, username)
+    cfg["github_username"] = username
+    cfg["display_name"] = display_name
+    print(f"[info] Generating status bars for user: {username} (display: {display_name})")
+
     data = collect_data(cfg, force_demo=args.demo)
     ASSETS.mkdir(parents=True, exist_ok=True)
 
