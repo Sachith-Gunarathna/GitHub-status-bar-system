@@ -60,7 +60,7 @@
     <path d="M1038 332v-18h20 M1565 312h20v20 M1038 450v18h20 M1565 470h20v-20" fill="none" stroke="#1B8FA5"/>
     <rect x="1062" y="336" width="18" height="18" fill="#FF6685"/>
     <text class="mono label" x="1096" y="353" fill="#91B8C8">PROJECT</text>
-    <text class="mono value" x="1082" y="417" font-size="31" fill="#F4FAFC">GITHUB-STATUS-BAR-SYSTEM</text>
+    <text class="mono value" x="1082" y="417" font-size="38" fill="#F4FAFC">SACHITH-GUNARATHNA</text>
     <rect x="1082" y="440" width="402" height="7" fill="#FF6685"/>
   </g>
   <g>
