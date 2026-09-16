@@ -43,7 +43,7 @@
   <text class="mono value" x="165" y="572" font-size="24" fill="#28D9BE">767</text>
   <line x1="375" y1="549" x2="375" y2="580" stroke="#46C7D7" stroke-width="2"/>
   <text class="mono" x="438" y="572" font-size="18" fill="#597B96">CURRENT STREAK</text>
-  <text class="mono value" x="650" y="572" font-size="24" fill="#F3C85C">7D</text>
+  <text class="mono value" x="650" y="572" font-size="24" fill="#F3C85C">0D</text>
   <line x1="860" y1="549" x2="860" y2="580" stroke="#46C7D7" stroke-width="2"/>
   <text class="mono" x="945" y="572" font-size="18" fill="#597B96">BEST STREAK</text>
   <text class="mono value" x="1118" y="572" font-size="24" fill="#F25F7B">13D</text>
