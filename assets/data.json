@@ -9,7 +9,6 @@
     0,
     0,
     0,
-    0,
     44,
     186,
     72,
@@ -21,7 +20,6 @@
     116
   ],
   "month_labels": [
-    "SEP",
     "OCT",
     "NOV",
     "DEC",
@@ -35,7 +33,7 @@
     "AUG",
     "SEP"
   ],
-  "latest_repo": "Sachith-Gunarathna",
-  "latest_language": "Python",
-  "status": "OFFLINE"
+  "latest_repo": "EcoGrid-App",
+  "latest_language": "Java",
+  "status": "ACTIVE NOW"
 }
