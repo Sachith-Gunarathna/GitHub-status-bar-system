@@ -17,7 +17,8 @@
     50,
     33,
     81,
-    117
+    117,
+    0
   ],
   "month_labels": [
     "OCT",
@@ -31,7 +32,8 @@
     "JUN",
     "JUL",
     "AUG",
-    "SEP"
+    "SEP",
+    "OCT"
   ],
   "latest_repo": "EcoGrid-App",
   "latest_language": "Java",
