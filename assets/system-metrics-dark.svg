@@ -52,7 +52,7 @@
     <rect x="1052" y="280" width="473" height="170" fill="#07151d" stroke="#1B8FA5" stroke-opacity=".55"/>
     <rect x="1052" y="280" width="473" height="8" fill="#FF6685"/>
     <text class="mono label" x="1084" y="336" fill="#91B8C8">FOLLOWERS</text>
-    <text class="mono value" x="1084" y="406" font-size="54" fill="#F4FAFC">4</text>
+    <text class="mono value" x="1084" y="406" font-size="54" fill="#F4FAFC">5</text>
     <rect x="1420" y="385" width="18" height="20" fill="#FF6685" opacity=".75"/>
     <rect x="1454" y="363" width="18" height="42" fill="#FF6685" opacity=".85"/>
     <rect x="1488" y="340" width="18" height="65" fill="#FF6685"/>
