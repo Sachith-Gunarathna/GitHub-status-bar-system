@@ -17,7 +17,8 @@
     33,
     81,
     117,
-    20
+    20,
+    0
   ],
   "month_labels": [
     "NOV",
@@ -31,7 +32,8 @@
     "JUL",
     "AUG",
     "SEP",
-    "OCT"
+    "OCT",
+    "NOV"
   ],
   "latest_repo": "ECOGRID-ADMIN-PANEL",
   "latest_language": "JavaScript",
