@@ -2,8 +2,8 @@
   "public_repos": 47,
   "total_stars": 3,
   "followers": 5,
-  "total_contributions": 888,
-  "current_streak": 1,
+  "total_contributions": 892,
+  "current_streak": 2,
   "best_streak": 13,
   "monthly_contributions": [
     0,
@@ -18,7 +18,7 @@
     81,
     117,
     20,
-    66
+    70
   ],
   "month_labels": [
     "NOV",
@@ -35,7 +35,7 @@
     "OCT",
     "NOV"
   ],
-  "latest_repo": "SmartCity360",
-  "latest_language": "Java",
-  "status": "OFFLINE"
+  "latest_repo": "hire_us",
+  "latest_language": "Dart",
+  "status": "RECENTLY ACTIVE"
 }
